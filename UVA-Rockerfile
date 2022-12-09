@@ -1,0 +1,8 @@
+FROM rocker/verse:latest
+RUN install2.r httpgd languageserver ggplot2 dplyr stringr GGally psych lattice ggpubr gplots MASS ggfortify ggResidpanel pacman datasets devtools here lindia boot data.table plyr scales grid forecast tidyverse lubridate mtsdi car tseries MTS
+# RUN wget https://github.com/gitpod-io/openvscode-server/releases/download/openvscode-server-v1.72.3/openvscode-server-v1.72.3-linux-x64.tar.gz
+# RUN tar -xvf openvscode-server-v1.72.3-linux-x64.tar.gz
+# RUN mv openvscode-server-v1.72.3-linux-x64 /openvscode-server
+# RUN echo "#! /bin/bash\n/openvscode-server/bin/openvscode-server --host 0.0.0.0 --without-connection-token" >> /bin/coded
+# RUN chown rstudio:rstudio /bin/coded
+# RUN chmod 700 /bin/coded

@@ -1,0 +1,19 @@
+version: "3"
+services:
+  R:
+    image: rocker/verse:uva
+    build:
+      context: .
+      dockerfile: UVA-Rockerfile
+    container_name: R-c
+    volumes:
+      - "/mnt/c/Users/spong/OneDrive\ -\ University\ of\ Virginia/R\ Statistics/:/home/rstudio/onedrive"
+      - "~/.vscode-server:/home/rstudio/.vscode-server"
+    user: rstudio
+    working_dir: /home/rstudio/onedrive
+    # make it restart automatically
+    restart: always
+    deploy:
+      resources:
+        limits:
+          memory: 5G

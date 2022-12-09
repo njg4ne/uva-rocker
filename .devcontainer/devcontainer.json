@@ -1,0 +1,6 @@
+{
+  "name": "Rocker Dev Container",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "R",
+  "workspaceFolder": "/home/rstudio/onedrive"
+}
