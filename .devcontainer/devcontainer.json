@@ -5,7 +5,9 @@
   "workspaceFolder": "/home/rstudio/src",
   "customizations": {
     "vscode": {
-      // "settings": {},
+      "settings": {
+        "r.plot.useHttpgd": true
+      },
       "extensions": [
         "REditorSupport.r",
         "GitHub.copilot",
