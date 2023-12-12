@@ -2,5 +2,17 @@
   "name": "Rocker Dev Container",
   "dockerComposeFile": "../docker-compose.yml",
   "service": "R",
-  "workspaceFolder": "/home/rstudio/onedrive"
+  "workspaceFolder": "/home/rstudio/src",
+  "customizations": {
+    "vscode": {
+      // "settings": {},
+      "extensions": [
+        "REditorSupport.r",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "ms-vscode.vscode-speech",
+        "janisdd.vscode-edit-csv"
+      ]
+    }
+  }
 }
