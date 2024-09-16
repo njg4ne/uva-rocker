@@ -1,12 +1,18 @@
 {
-  "name": "Rocker Dev Container",
-  "dockerComposeFile": "../docker-compose.yml",
-  "service": "R",
-  "workspaceFolder": "/home/rstudio/src",
+  "name": "Rocker",
+  "image": "rocker/tidyverse:latest",
+  "workspaceFolder": "/workspace",
+  "mounts": [
+    "source=C:/Users/Nicholas/code/5614-uva/analysis/questionnaires,target=/workspace,type=bind",
+    "source=${localWorkspaceFolder}/R/library,target=/usr/local/lib/R/library,type=bind",
+    "source=${localWorkspaceFolder}/R/site-library,target=/usr/local/lib/R/site-library,type=bind",
+    "source=${localWorkspaceFolder}/.Rprofile,target=/home/rstudio/.Rprofile,type=bind"
+  ],
   "customizations": {
     "vscode": {
       "settings": {
-        "r.plot.useHttpgd": true
+        "r.plot.useHttpgd": true,
+        "terminal.integrated.shell.linux": "/bin/bash"
       },
       "extensions": [
         "REditorSupport.r",
@@ -16,5 +22,7 @@
         "janisdd.vscode-edit-csv"
       ]
     }
-  }
+  },
+  "remoteUser": "rstudio",
+  "onCreateCommand": "install2.r --error --skipinstalled --ncpus -1 httpgd languageserver lme4 lmerTest coin effectsize MASS && rm -rf /tmp/downloaded_packages"
 }

@@ -1,4 +1,0 @@
-FROM rocker/verse:latest
-RUN install2.r httpgd languageserver ggplot2 dplyr stringr GGally psych lattice ggpubr gplots MASS ggfortify ggResidpanel pacman datasets devtools here lindia boot data.table plyr scales grid forecast tidyverse lubridate mtsdi car tseries MTS
-RUN install2.r lme4 lmerTest
-RUN install2.r coin effectsize
