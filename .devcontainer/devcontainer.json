@@ -6,6 +6,7 @@
     "source=C:/Users/Nicholas/code/5614-uva/analysis/questionnaires,target=/workspace,type=bind",
     "source=${localWorkspaceFolder}/R/library,target=/usr/local/lib/R/library,type=bind",
     "source=${localWorkspaceFolder}/R/site-library,target=/usr/local/lib/R/site-library,type=bind",
+    "source=${localWorkspaceFolder}/.Rprofile,target=/root/.Rprofile,type=bind",
     "source=${localWorkspaceFolder}/.Rprofile,target=/home/rstudio/.Rprofile,type=bind"
   ],
   "customizations": {
@@ -23,6 +24,6 @@
       ]
     }
   },
-  "remoteUser": "rstudio",
-  "onCreateCommand": "apt install -y; apt install libgsl-dev -y; install2.r --error --skipinstalled --ncpus -1 MVN mediation stargazer lavaan sandwich psych httpgd plm languageserver lme4 lmtest lmerTest coin effectsize MASS && rm -rf /tmp/downloaded_packages"
+  // "remoteUser": "rstudio",
+  "onCreateCommand": "apt update; apt install -y; apt install libgsl-dev -y; install2.r --error --skipinstalled --ncpus -1 stringi MVN mediation stargazer lavaan sandwich psych httpgd plm languageserver lme4 lmtest lmerTest coin effectsize MASS reshape2 lmPerm && rm -rf /tmp/downloaded_packages"
 }
